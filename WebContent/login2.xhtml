@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+<!--NEW SCRIPTS-->
+
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Varela+Round'
+	rel='stylesheet' type='text/css' />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- <script type="text/javascript" src="js/login.js"></script> -->
+
+
+
+</head>
+<body>
+	<div class="container">
+		<!-- LOGIN FORM -->
+		<div class="text-center" style="padding: 50px 0">
+			<div class="logo">LOGIN</div>
+			<!-- Main Form -->
+			<div class="login-form-1">
+				<h:form id="login-form" class="text-left">
+					<h:messages showSummary="true" showDetail="true"></h:messages>
+					<h:messages globalOnly="true" showSummary="true" showDetail="true"></h:messages>
+
+					<div class="login-form-main-message"></div>
+					<div class="main-login-form">
+						<div class="login-group">
+							<div class="form-group">
+								<h:inputText type="text" class="form-control" id="reg_nombre"
+									name="reg_nombre" a:placeholder="Nombre Usuario"
+									value="#{usuarioMB.usuario.nombreusu}" required="true"
+									requiredMessage="Campo obligatorio">
+								</h:inputText>
+								<h:message for="reg_nombre" style="color:red"></h:message>
+							</div>
+							<div class="form-group">
+								<h:inputText type="text" class="form-control" id="reg_apellido"
+									name="reg_apellido" a:placeholder="Apellido"
+									value="#{usuarioMB.usuario.apeusu}" required="true"
+									requiredMessage="Campo obligatorio">
+								</h:inputText>
+								<h:message for="reg_apellido" style="color:red"></h:message>
+							</div>
+							
+						</div>
+						<!-- 						<div class="form-group login-group-checkbox"> -->
+						<!-- 							<h:selectManyCheckbox id="lg_remember" name="lg_remember"></h:selectManyCheckbox> -->
+						<!-- 							<label for="lg_remember">remember</label> -->
+						<!-- 						</div> -->
+					</div>
+				</h:form>
+				<h:commandButton type="submit" class="login-button"
+					action="#{usuarioMB.loginControl}" style="background-color:gray">
+					<!-- 							<i class="fa fa-chevron-right"></i> -->
+				</h:commandButton>
+			</div>
+
+			</h:form>
+		</div>
+		<!-- end:Main Form -->
+	</div>
+</body>
+</html>
