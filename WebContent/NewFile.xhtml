@@ -26,97 +26,64 @@
 
 </h:head>
 <body>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="principal_imgKarma.xhtml">ImgKarma</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Page 1</a></li>
-			<li><a href="#">Page 2</a></li>
-		</ul>
-		<div class="nav navbar-nav navbar-right">
-			<form class="navbar-form" role="search">
-				<div class="input-group">
-					<h:inputText type="text" class="form-control"
-						a:placeholder="Search" name="q"></h:inputText>
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-							<!-- 						glyphicon glyphicon-search -->
-							<i class="glyphicon glyphicon-sunglasses"></i>
-						</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-	</nav>
-	<!-- 	end navbar -->
-
-	<div class="contpage" style="font-size: 50px; padding: 30px 30px 0;">
-		
-	</div>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class="text-center">
-					<div class="logo" style="font-size: 33px; color:black;">
+					<div class="logo" style="font-size: 33px;">
 						<p>REGISTRAR USUARIO</p>
 					</div>
 				</div>
 				<!-- Main Form -->
 				<h:form id="register-form" class="text-left">
-					<!-- 					<pr:growl id="message" showDetail="true" /> -->
-					<h:messages globalOnly="true" showSummary="true" showDetail="true"></h:messages>
+				 <pr:messages id="msgs" />
+<!-- 					<pr:growl id="growl" showDetail="true" sticky="true" /> -->
 
 					<div class="form-group">
-						<h:inputText class="form-control" id="reg_nombre"
+						<pr:inputText class="form-control" id="reg_nombre"
 							name="reg_nombre" a:placeholder="Nombre Usuario"
-							value="#{usuarioMB.usuario.nombreusu}" required="true"
-							requiredMessage="Nombre requerido.">
-						</h:inputText>
-						<h:message for="reg_nombre" style="color:blue"></h:message>
+							value="#{usuarioMB.usuario.nombreusu}" required="true">
+							 <f:validateLength minimum="2" />
+						</pr:inputText>
+						<pr:message for="reg_nombre"></pr:message>
 					</div>
 					<div class="form-group">
-						<h:inputText class="form-control" id="reg_apellido"
+						<pr:inputText class="form-control" id="reg_apellido"
 							name="reg_apellido" a:placeholder="Apellido"
 							value="#{usuarioMB.usuario.apeusu}"
-							style=" -wap-input-format: 10N;" required="true"
-							requiredMessage="Apellido requerido.">
-						</h:inputText>
-						<h:message for="reg_apellido" style="color:blue"></h:message>
+							style=" -wap-input-format: 10N;" required="true">
+							<f:validateLength minimum="2" />
+						</pr:inputText>
+						<pr:message for="reg_apellido" style="color:blue"></pr:message>
 					</div>
 					<div class="form-group">
-						<h:inputText class="form-control" id="reg_email" name="reg_email"
+						<pr:inputText class="form-control" id="reg_email" name="reg_email"
 							a:placeholder="E-Mail" value="#{usuarioMB.usuario.emailusu}"
-							required="true" requiredMessage="E-mail requerido.">
-						</h:inputText>
-						<h:message for="reg_email" style="color:blue"></h:message>
+							required="true">
+						</pr:inputText>
+<!-- 						<h:message for="reg_email" style="color:blue"></h:message> -->
 					</div>
 					<div class="form-group">
-						<h:inputText class="form-control" id="reg_username"
+						<pr:inputText class="form-control" id="reg_username"
 							name="reg_username" a:placeholder="Nombre de Usuario"
-							value="#{usuarioMB.usuario.username}" required="true"
-							requiredMessage="Nombre Usuario requerido.">
-						</h:inputText>
-						<h:message for="reg_username" style="color:blue"></h:message>
+							value="#{usuarioMB.usuario.username}" required="true">
+<!-- 							requiredMessage="Nombre Usuario requerido."> -->
+						</pr:inputText>
+<!-- 						<h:message for="reg_username" style="color:blue"></h:message> -->
 					</div>
 					<div class="form-group">
-						<h:inputText class="form-control" id="reg_password"
+						<pr:inputText class="form-control" id="reg_password"
 							name="reg_password" a:placeholder="Contraseña"
-							value="#{usuarioMB.usuario.password}" required="true"
-							requiredMessage="Contraseña requerida.">
-						</h:inputText>
-						<h:message for="reg_password" style="color:blue"></h:message>
+							value="#{usuarioMB.usuario.password}" required="true">
+<!-- 							requiredMessage="Contraseña requerida."> -->
+						</pr:inputText>
+<!-- 						<h:message for="reg_password" style="color:blue"></h:message> -->
 					</div>
 					<div class="form-group">
-						<pr:calendar locale="de" navigator="true"
-							value="#{usuarioMB.usuario.fecnacusu}" pattern="dd/MM/yyyy"
-							a:placeholder="Fecha Nacimiento" styleClass="dateTimeField">
+						<pr:calendar id="popup" value="#{usuarioMB.usuario.fecnacusu}"
+							pattern="dd/MM/yyyy" a:placeholder="Fecha Nacimiento"
+							styleClass="dateTimeField">
 						</pr:calendar>
 						<!-- 						<h:inputText class="form-control" name="reg_fechanacimiento" -->
 						<!-- 							id="reg_fechanacimiento" a:placeholder="Fecha Nacimiento" -->
@@ -137,11 +104,17 @@
 					</div>
 
 					<div class="form-group" style="text-align: center">
-						<h:commandButton class="btn btn-primary"
+						<pr:commandButton class="btn btn-primary"
 							action="#{usuarioMB.guardar}" value="REGISTRAR">
-							<!-- 							<pr:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" /> -->
-						</h:commandButton>
-
+<!-- 							<pr:confirm header="Confirmation" message="Are you sure?" -->
+<!-- 								icon="ui-icon-alert" /> -->
+						</pr:commandButton>
+<!-- 						<pr:confirmDialog global="true" showEffect="fade" hideEffect="fade"> -->
+<!-- 							<pr:commandButton value="Yes" type="button" -->
+<!-- 								styleClass="ui-confirmdialog-yes" icon="ui-icon-check" /> -->
+<!-- 							<pr:commandButton value="No" type="button" -->
+<!-- 								styleClass="ui-confirmdialog-no" icon="ui-icon-close" /> -->
+<!-- 						</pr:confirmDialog> -->
 					</div>
 					<div class="text-center">
 						<div class="etc-login-form">

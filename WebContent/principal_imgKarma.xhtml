@@ -4,44 +4,214 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:pr="http://primefaces.org/ui">
 
 
-<head>
-    <title>Chapter One - Treasure Island</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<h:head>
+<title>ImgKarma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html" />
 <!--     <link rel="icon" type="image/png" href="img/favicon.png"> -->
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Henny+Penny|Open+Sans" rel="stylesheet">
-    <!--NEW LINKS-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/background-img.css">
-    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!--NEW SCRIPTS-->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <!--start script -->
-    <script>
-        $(function () {
-            $('a[href*="#"]:not([href="#"])').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
+<!--NEW LINKS-->
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+<link rel="stylesheet" type="text/css" href="css/mystyle2.css" />
+<!--NEW SCRIPTS-->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js" />
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-</head>
-<body>
-	hola
-</body>
+
+</h:head>
+<h:body class="top">
+	<!-- 	start navbar -->
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">ImgKarma</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Page 1</a></li>
+				<li><a href="#">Page 2</a></li>
+			</ul>
+			<div class="nav navbar-nav navbar-right">
+				<form class="navbar-form" role="search">
+					<div class="input-group">
+						<h:inputText type="text" class="form-control"
+							a:placeholder="Search" name="q"></h:inputText>
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="submit">
+								<!-- 						glyphicon glyphicon-search -->
+								<i class="glyphicon glyphicon-sunglasses"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="registrar_user.xhtml"><span
+						class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="login.xhtml"><span
+						class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+
+		</div>
+	</nav>
+	<!-- 	end navbar -->
+
+	<div class="contpage" style="font-size: 50px; padding: 60px 30px 0;">
+		<p>Welcome To ImgKarma</p>
+	</div>
+	
+	<!--start -->
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+	<div class="container-fluid" style="width: 900px;">
+		<section id="" class="">
+			<h3>Insert title here</h3>
+			<div class="row">
+				<div class="col-sm-3 col-md-6"
+					style="background-color: lightblue; padding-bottom: 400px;">
+					<h2>INSERT MEME HERE</h2>
+				</div>
+
+				<div class="col-sm-3 col-md-6" style="background-color: yellow;">
+					<p></p>
+				</div>
+			</div>
+			a
+		</section>
+	</div>
+	<!-- 	fjasljflksflksaflsjsakvjbuverfnflasfjasdflksnafjasfklalakvnjavnlaknvkjdvksdvjand -->
+
+
+	<!--end about-->
+</h:body>
 </html>

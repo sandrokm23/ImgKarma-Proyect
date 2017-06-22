@@ -1,0 +1,25 @@
+/*Calendar*/
+
+.ui-inputfield {
+    font-weight: normal;
+    margin: 0;
+    outline: medium none;
+    padding: 4px;
+    width: 360px;
+}
+
+
+/*Navbar*/
+.ui-layout-north {
+        z-index:20 !important;
+        overflow:visible !important;
+    }
+
+    .ui-layout-north .ui-layout-unit-content {
+        overflow:visible !important;
+    }
+    
+/*  <p:layoutUnit position="north" size="100" resizable="true" closable="false" collapsible="true"> */
+/*  <div id="campo1" style="background-color: red; width: 500px; height: 600px;">  */
+/* 	campo */
+/* 	</div> */

@@ -6,8 +6,9 @@
 	
 	<class>proyecto.beans.PuntuacionPublicacion</class>
 	<class>proyecto.beans.Usuario</class>
-	<class>proyecto.beans.TipoUsuario</class>
 	<class>proyecto.beans.Publicacion</class>
+	<class>proyecto.beans.Imagen</class>
+	<class>proyecto.beans.TipoUsuario</class>
 	<class>proyecto.beans.Comentario</class>
 	<class>proyecto.beans.Seccion</class>
 	<class>proyecto.beans.PuntuacionComentario</class>
@@ -18,7 +19,7 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/imgkarma" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.password" value="mysql" />
+			<property name="javax.persistence.jdbc.password" value="MySQL" />
 			<property name="eclipselink.logging.level" value="OFF" />
  			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> 
 		</properties>

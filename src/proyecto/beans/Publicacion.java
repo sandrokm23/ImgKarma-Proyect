@@ -1,18 +1,27 @@
 package proyecto.beans;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.primefaces.model.UploadedFile;
+
 
 @Entity
 @Table(name="tb_publicacion")
-public class Publicacion {
+public class Publicacion{
 
 	
 	@Id
@@ -24,9 +33,40 @@ public class Publicacion {
 	@Temporal(TemporalType.DATE)
 	private Date fechpub;
 	private String estpub;
+	private Long puntpub;
+	
+	@Lob
+	private byte[] img;
+	
+	//mas prueba
+	/*private UploadedFile imagensubida;
+
+	
+	public UploadedFile getImagensubida() {
+		return imagensubida;
+	}
+	public void setImagensubida(UploadedFile imagensubida) {
+		this.imagensubida = imagensubida;
+	}*/
+	
+	
+
 	//fks
-	private Seccion idsec = new Seccion();
-	private Usuario idusu = new Usuario();
+	//private Seccion idsec = new Seccion();
+	public byte[] getImg() {
+		return img;
+	}
+	public void setImg(byte[] img) {
+		this.img = img;
+	}
+
+	//private Usuario idusu = new Usuario();
+	
+	/*@OneToMany
+	@JoinColumn(name="idcom")
+	private List<Comentario> comentarios = new ArrayList<Comentario>();
+	*/
+	
 	public Long getIdpub() {
 		return idpub;
 	}
@@ -63,7 +103,7 @@ public class Publicacion {
 	public void setEstpub(String estpub) {
 		this.estpub = estpub;
 	}
-	public Seccion getIdsec() {
+	/*public Seccion getIdsec() {
 		return idsec;
 	}
 	public void setIdsec(Seccion idsec) {
@@ -74,9 +114,30 @@ public class Publicacion {
 	}
 	public void setIdusu(Usuario idusu) {
 		this.idusu = idusu;
+	}*/
+	public Long getPuntpub() {
+		return puntpub;
 	}
-	
+	public void setPuntpub(Long puntpub) {
+		this.puntpub = puntpub;
+	}
+/*	public List<Comentario> getComments() {
+		return comentarios;
+	}
+	public void setComments(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
+	}
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
+	}
+*/
 
+
+
+	
 	
 
 }

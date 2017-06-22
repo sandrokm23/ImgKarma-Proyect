@@ -1,11 +1,16 @@
 package proyecto.managedbeans;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 import com.google.common.collect.Lists;
 
@@ -61,9 +66,12 @@ public class UsuarioMB {
 	
 	public String guardar(){
 		
+		 FacesContext.getCurrentInstance().addMessage(null,
+	                new FacesMessage("Welcome"));
 //		tipoUsuario = tusuarioService()->get('user');
-		
+		Date date = new Date();
 		usuario.setTusu(null);
+		usuario.setFecregusu(date);
 		
 		usuarioService.getUsuarioRepository().save(usuario);
 		usuario = new Usuario();

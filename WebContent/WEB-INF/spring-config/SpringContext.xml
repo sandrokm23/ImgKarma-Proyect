@@ -26,7 +26,7 @@
 		<property name="databasePlatform"
 			value="org.eclipse.persistence.platform.database.MySQLPlatform" />
 		<property name="generateDdl" value="false" />
-		<property name="showSql" value="true" />
+		<property name="showSql" value="false" />
 	</bean>
 
 	<!-- Entity Manager Factory -->

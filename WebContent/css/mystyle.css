@@ -1,4 +1,6 @@
-﻿/*------------------------------------------------------------------
+﻿@import
+	url(https://fonts.googleapis.com/css?family=Henny+Penny|Open+Sans);
+/*------------------------------------------------------------------
 [Master Stylesheet]
 
 Project    	: Aether
@@ -293,12 +295,38 @@ label:hover:before {
 }
 /*=== 9. Misc ===*/
 .logo {
+	font-family: Henny Penny;
 	padding: 15px 0;
-	font-size: 25px;
 	color: #aaaaaa;
 	font-weight: bold;
 }
-/*=============================================================*/
+
+
+/*==============================================================================================*/
+/*Estilo letra*/
+.contImg{
+ margin: 0;
+ background-color: rgba(35, 55, 61, 0.60);
+ background-repeat:no-repeat; 
+ background-position:center; 
+ width: 100%;
+ height: 100vh; 
+}
+
+.karma-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #aaaaaa;
+}
+.karma-text #l{
+ font-family: Henny Penny;/*llama font*/
+ font-size: 30%;
+ text-shadow: 2px 0px 1px #000, 2px 0px 1px #000, 1px 2px 0px#000;
+}
+/*==============================================================================================*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
